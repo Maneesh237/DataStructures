@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main()
+{
+    int c[100],i,sum=0,n,sum1=0,sqsum=0,sqsum1=0,a,b;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&c[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        sum=sum+c[i];
+        sqsum=sqsum+c[i]*c[i];
+    }
+    for(i=1;i<=n;i++)
+    {
+        sum1=sum1+i;
+        sqsum1=sqsum1+i*i;
+    }
+    b=(((sqsum1-sqsum)/(sum1-sum))+sum1-sum)/2;
+    a=sum-sum1+b;
+    printf("%d %d",a,b);
+    return 0;
+}
