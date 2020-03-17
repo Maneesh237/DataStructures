@@ -35,14 +35,13 @@ class Parthensis
 		Parthensis p = new Parthensis();
 		Scanner s = new Scanner(System.in);
 		int n = s.nextInt();
-		if(n>0 && n%2==0)
+		if(n>0)
 		{
-		node root = new node(n/2,n/2,"");
+		node root = new node(n,n,"");
 		p.parthensis(root);
 		p.print(root);
 		}
-		else
-			System.out.println(-1);
+		else System.out.println(-1);
 	}
 }
 class node
@@ -59,20 +58,20 @@ class node
 	}
 }
 /* test cases
-case 1: input n=2
+case 1: input n=1
 		output ()
-case 2: input n=4
+case 2: input n=2
 		output (())
 			   ()()
 case 3: input n=-2
 		output -1
-case 4: input n=6
+case 4: input n=3
 		output ((()))
 			   (()())
 			   (())()
 			   ()(())
 			   ()()()
-case 5: input n=8
+case 5: input n=4
 		output (((())))
                ((()()))
                ((())())
